@@ -99,7 +99,7 @@ app.get("/qr/:filename", async (c) => {
     // テキストのスタイルと配置
     let fontSize = 32;
     const textPadding = 4;
-    const maxTextWidth = width * 0.95; // QRコードの幅の95%を最大幅とする
+    const maxTextWidth = width * 0.6; // QRコードの幅の80%を最大幅とする
 
     // 簡易的なテキスト幅の計算（正確ではないが近似値: Arialの平均的な文字幅率0.6と仮定）
     let textWidthEstimate = displayText.length * (fontSize * 0.6) + (textPadding * 2);
