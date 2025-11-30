@@ -1,6 +1,23 @@
 name = "url-shortener"
 compatibility_date = "2024-07-12"
 
+# KV Namespace for URL storage
 [[kv_namespaces]]
 binding = "KV"
 id = "your-kv-namespace-id-here"
+
+# KV Namespace for Rate Limiting
+[[kv_namespaces]]
+binding = "RATE_LIMITER"
+id = "your-rate-limiter-kv-namespace-id-here"
+
+# 環境変数: 認証トークン
+# ローカル開発時は .dev.vars ファイルに設定してください:
+# AUTH_TOKEN=your-secret-token-here
+#
+# 本番環境では以下のコマンドで設定してください:
+# wrangler pages secret put AUTH_TOKEN
+# または Cloudflare ダッシュボードの Settings > Environment variables で設定
+
+[vars]
+# AUTH_TOKEN = "your-secret-token-here"  # 本番環境ではシークレットとして設定することを推奨

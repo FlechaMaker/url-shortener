@@ -12,3 +12,4 @@ bun.lockb
 # project specific
 .specstory
 wrangler.toml
+SECURITY.md
